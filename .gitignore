@@ -31,3 +31,6 @@ typechain
 #Hardhat files
 cache
 artifacts
+
+# Other code
+src/assets/background/parallax-bg.gif
