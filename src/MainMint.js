@@ -46,7 +46,7 @@ const MainMint = ({ accounts, setAccounts }) => {
 
     return (
         <Flex justify="center" align="center" height="100vh" paddingBottom="150px">
-            <Box width="520px">
+            <Box width="580px">
                 <div>
                     <Text fontSize="48px" textShadow="0 5px #000000">RealKittyNFT</Text>
                     <Text
@@ -111,7 +111,6 @@ const MainMint = ({ accounts, setAccounts }) => {
                         letterSpacing="-5.5%"
                         fontFamily="VT323"
                         textShadow="0 3px #000000"
-                        color="#D6517D"
                         >
                         You have to connect metamask wallet to mint.
                     </Text>
