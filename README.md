@@ -1,5 +1,10 @@
 ### Список команд при помощи которых создан проект
 
+Используется:
+1. https://chakra-ui.com/guides/first-steps
+2. https://create-react-app.dev/
+
+
 ```
 npx create-react-app real-kitty
 cd real-kitty
@@ -10,6 +15,8 @@ git push -u origin main
 
 npm i -D hardhat
 npm i @openzeppelin/contracts
+
+npm i @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^6
 ```
 
 
