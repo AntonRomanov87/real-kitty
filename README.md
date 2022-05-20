@@ -1,8 +1,20 @@
+### Как запустить проект
+
+В .env прописывается:
+1. Infura Rinkeby endpoint: https://rinkeby.infura.io/v3/...
+2. https://etherscan.io/ API KEY
+3. Wallet private key начинающийся с "0x"
+
+
+
+
 ### Список команд при помощи которых создан проект
 
 Используется:
 1. https://chakra-ui.com/guides/getting-started/cra-guide
 2. https://create-react-app.dev/
+
+
 
 
 ```
@@ -17,6 +29,8 @@ npm i -D hardhat
 npm i @openzeppelin/contracts
 
 npm i @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^6
+
+npm i -D dotenv
 ```
 
 
