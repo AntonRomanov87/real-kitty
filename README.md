@@ -6,6 +6,14 @@
 3. Wallet private key начинающийся с "0x"
 
 
+Деплой:
+```
+npm i -g hardhat-shorthand
+hh clean
+hh compile
+hh run scripts/deploy.js --network rinkeby
+hh verify --network rinkeby <CONTRACT ADDRESS>
+```
 
 
 ### Список команд при помощи которых создан проект
@@ -31,6 +39,7 @@ npm i @openzeppelin/contracts
 npm i @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^6
 
 npm i -D dotenv
+npm i -D @nomiclabs/hardhat-etherscan
 ```
 
 
