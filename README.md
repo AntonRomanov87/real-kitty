@@ -1,3 +1,6 @@
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +71,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### Список команд для создания проекта
+
+```
+npx create-react-app real-kitty
+cd real-kitty
+
+git remote add origin git@github.com:AntonRomanov87/real-kitty.git
+git branch -M main
+git push -u origin main
+```
