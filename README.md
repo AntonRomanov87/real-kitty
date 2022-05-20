@@ -21,6 +21,17 @@ hh verify --network rinkeby <CONTRACT ADDRESS>
 npm run start
 ```
 
+### Загрузка проекта в Heroku
+
+Устанавливаем heroku-cli https://devcenter.heroku.com/articles/heroku-cli
+
+
+Далее:
+```
+heroku login -i
+
+```
+
 
 ### Список команд при помощи которых создан проект
 
@@ -46,6 +57,11 @@ npm i @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^6
 
 npm i -D dotenv
 npm i -D @nomiclabs/hardhat-etherscan
+
+# Переносим из devDependencies в dependencies
+npm i ethers -P 
+
+heroku git:remote -a nft-mint-kitty
 ```
 
 
