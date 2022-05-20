@@ -1,3 +1,36 @@
+### Список команд при помощи которых создан проект
+
+```
+npx create-react-app real-kitty
+cd real-kitty
+
+git remote add origin git@github.com:AntonRomanov87/real-kitty.git
+git branch -M main
+git push -u origin main
+
+npm i -D hardhat
+npm i @openzeppelin/contracts
+```
+
+
+
+
+
+# Basic Sample Hardhat Project
+
+This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+
+Try running some of the following tasks:
+
+```shell
+npx hardhat accounts
+npx hardhat compile
+npx hardhat clean
+npx hardhat test
+npx hardhat node
+node scripts/sample-script.js
+npx hardhat help
+```
 
 
 
@@ -73,13 +106,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-### Список команд для создания проекта
-
-```
-npx create-react-app real-kitty
-cd real-kitty
-
-git remote add origin git@github.com:AntonRomanov87/real-kitty.git
-git branch -M main
-git push -u origin main
-```
