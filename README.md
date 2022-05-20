@@ -1,7 +1,7 @@
 ### Список команд при помощи которых создан проект
 
 Используется:
-1. https://chakra-ui.com/guides/first-steps
+1. https://chakra-ui.com/guides/getting-started/cra-guide
 2. https://create-react-app.dev/
 
 
