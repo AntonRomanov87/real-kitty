@@ -29,7 +29,9 @@ npm run start
 Далее:
 ```
 heroku login -i
-
+heroku git:remote -a nft-mint-kitty
+git push heroku main
+heroku logs --tail
 ```
 
 
