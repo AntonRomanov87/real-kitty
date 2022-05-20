@@ -45,7 +45,8 @@ contract RealKittyNFT is ERC721, ERC721Enumerable, Ownable {
         require(isMintActive, "isMintActive must be active to mint new NFTs");
         require(nNewTokens <= MAX_PUBLIC_MINT, "Exceeded max token purchase");
         require(totalSupply() + nNewTokens <= MAX_SUPPLY, "Purchase would exceed max tokens supply");
-        require(PRICE_PER_TOKEN * nNewTokens <= msg.value, "Ether value sent is not correct");
+        require(msg.value >= PRICE_PER_TOKEN * nNewTokens, "Ether value sent is not correct");
+        require(walletMints[msg.sender] + nNewTokens <= MAX_PUBLIC_MINT, "Exceeded max per wallet");
 
         uint256 tokenId = _tokenIdCounter.current();
         for (uint256 i = 0; i < nNewTokens; i++) {
@@ -53,6 +54,11 @@ contract RealKittyNFT is ERC721, ERC721Enumerable, Ownable {
             _safeMint(msg.sender, tokenId);
             tokenId = _tokenIdCounter.current();
         }
+    }
+
+    function withdraw() external onlyOwner {
+        (bool success, ) = withdrawWallet.call{ value: address(this).balance}('');
+        require(success, 'withdraw failed');
     }
 
     // The following functions are overrides required by Solidity.
@@ -71,10 +77,5 @@ contract RealKittyNFT is ERC721, ERC721Enumerable, Ownable {
         returns (bool)
     {
         return super.supportsInterface(interfaceId);
-    }
-
-    function withdraw() external onlyOwner {
-        (bool success, ) = withdrawWallet.call{ value: address(this).balance}('');
-        require(success, 'withdraw failed');
     }
 }
