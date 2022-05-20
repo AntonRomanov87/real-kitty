@@ -2,7 +2,7 @@ const hre = require("hardhat");
 
 async function main() {
   const RealKittyNFTContract = await hre.ethers.getContractFactory("RealKittyNFT");
-  const nftDeployed = await RealKittyNFTContract.deploy("Hello, Hardhat!");
+  const nftDeployed = await RealKittyNFTContract.deploy();
 
   await nftDeployed.deployed();
 
