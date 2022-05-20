@@ -12,14 +12,18 @@ contract RealKittyNFT is ERC721, ERC721Enumerable, Ownable {
     Counters.Counter private _tokenIdCounter;
 
     string private _baseURIvalue;
+    address payable public withdrawWallet;
+    mapping(address => uint256) public walletMints;
+    
     bool public isMintActive                 = false;
     uint256 public constant MAX_SUPPLY       = 100;
     uint256 public constant MAX_PUBLIC_MINT  = 3;
     uint256 public constant PRICE_PER_TOKEN  = 0.01 ether;
 
+
     constructor() ERC721("RealKittyNFT", "RKTN") {}
 
-    function setBaseURI(string memory baseURI) external onlyOwner() {
+    function setBaseURI(string memory baseURI) external onlyOwner {
         _baseURIvalue = baseURI;
     }
 
@@ -67,5 +71,10 @@ contract RealKittyNFT is ERC721, ERC721Enumerable, Ownable {
         returns (bool)
     {
         return super.supportsInterface(interfaceId);
+    }
+
+    function withdraw() external onlyOwner {
+        (bool success, ) = withdrawWallet.call{ value: address(this).balance}('');
+        require(success, 'withdraw failed');
     }
 }
