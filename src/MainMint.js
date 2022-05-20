@@ -19,7 +19,7 @@ const MainMint = ({ accounts, setAccounts }) => {
             );
 
             try {
-                const response = await contract.mint(BigNumber(mintAmount));
+                const response = await contract.mint(BigNumber.from(mintAmount));
                 console.log("Response to mint: ", response);
             } catch(err) {
                 console.log("Error: ", err);
@@ -48,9 +48,9 @@ const MainMint = ({ accounts, setAccounts }) => {
             {isConnected ? (
                 <div>
                     <div>
-                        <buton onClick={handeDecrement}>-</buton>
-                        <input type="number" value={mintAmount} />
-                        <buton onClick={handeIncrement}>+</buton>
+                        <button onClick={handeDecrement}>-</button>
+                        <input type="number" value={mintAmount} readOnly />
+                        <button onClick={handeIncrement}>+</button>
                     </div>
                     <button onClick={handleMint}> Mint now </button>
                 </div>

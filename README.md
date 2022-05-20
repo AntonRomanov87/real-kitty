@@ -6,13 +6,19 @@
 3. Wallet private key начинающийся с "0x"
 
 
-Деплой:
+Деплой смарт-контракта:
 ```
 npm i -g hardhat-shorthand
 hh clean
 hh compile
 hh run scripts/deploy.js --network rinkeby
 hh verify --network rinkeby <CONTRACT ADDRESS>
+```
+
+
+Запуск сайта локально:
+```
+npm run start
 ```
 
 
