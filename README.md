@@ -21,12 +21,6 @@ hh verify --network rinkeby <CONTRACT ADDRESS>
 npm run start
 ```
 
-Опубликовать production-версию в heroku
-```
-git push heroku  
-```
-Используется nginx-solo: см. `Procfile` и `config/nginx.conf.erb`. 
-Production-сборка лежит в директории `build`. 
 
 
 
@@ -42,6 +36,22 @@ heroku git:remote -a nft-mint-kitty
 git push heroku main
 heroku logs --tail
 ```
+
+Опубликовать production-версию в heroku
+```
+git push heroku  
+```
+Используется nginx-solo: см. `Procfile` и `config/nginx.conf.erb`. 
+Production-сборка лежит в директории `build` которая собриается через `npm run build`. 
+
+
+Подробнее:
+1. https://create-react-app.dev/docs/deployment/
+2. https://create-react-app.dev/docs/using-the-public-folder/
+3. https://devcenter.heroku.com/articles/config-vars 
+4. https://elements.heroku.com/buildpacks/heroku/heroku-buildpack-nginx
+
+
 
 
 ### Список команд при помощи которых создан проект
