@@ -53,7 +53,7 @@ git branch -M main
 git push -u origin main
 
 npm i -D hardhat
-npm i @openzeppelin/contracts
+npm i -D @openzeppelin/contracts
 
 npm i @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^6
 
@@ -63,8 +63,10 @@ npm i -D @nomiclabs/hardhat-etherscan
 # Переносим из devDependencies в dependencies
 npm i ethers -P 
 
+
 heroku git:remote -a nft-mint-kitty
 ```
+
 
 
 
