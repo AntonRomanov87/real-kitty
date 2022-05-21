@@ -1,0 +1,16 @@
+{
+  "name": "Real kitty #3",
+  "description": "Real world kitty collection. She wants to be famous.",
+  "image": "ipfs://bafybeidqvzba2oya7xa5d4bwctz6cjk4yuaxlo6wltuidjcvw2ypbr6zty/3.jpg",
+  "external_url": "https://realkitty.xyz/view/3/",
+  "attributes": [
+    {
+      "trait_type": "Position", 
+      "value": "On table"
+    }, 
+    {
+      "trait_type": "Sight", 
+      "value": "Sunbeam"
+    }
+  ]
+}

@@ -4,6 +4,7 @@
 1. Infura Rinkeby endpoint: https://rinkeby.infura.io/v3/...
 2. https://etherscan.io/ API KEY
 3. Wallet private key начинающийся с "0x"
+4. API Key NFT_STORAGE_KEY из https://nft.storage/
 
 
 Деплой смарт-контракта:
@@ -42,6 +43,30 @@ undefined
 npm run start
 ```
 
+
+### Данные для NFT в IPFS
+
+Описание:
+1. https://nft.storage/docs/
+2. https://nft.storage/docs/concepts/car-files/ 
+
+
+Упаковать директорию в CAR-файл:
+```
+ipfs-car --wrapWithDirectory false --pack nft-data/images --output nft-data/images.car
+```
+
+
+Посмотреть состав архива и адресацию:
+```
+ipfs-car --list nft-data/images.car 
+```
+
+
+
+
+
+Как просмотреть что получилось: https://ipfs.io/ipfs/bafybeidqvzba2oya7xa5d4bwctz6cjk4yuaxlo6wltuidjcvw2ypbr6zty/0.jpg
 
 
 
@@ -102,6 +127,10 @@ npm i -D @nomiclabs/hardhat-etherscan
 
 # Переносим из devDependencies в dependencies
 npm i ethers -P 
+
+npm i -D mime  
+npm i -D nft.storage
+npm i -g ipfs-car   
 
 
 heroku git:remote -a nft-mint-kitty
