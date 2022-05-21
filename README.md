@@ -12,8 +12,29 @@ npm i -g hardhat-shorthand
 hh clean
 hh compile
 hh run scripts/deploy.js --network rinkeby
-hh verify --network rinkeby <CONTRACT ADDRESS>
+hh verify --network rinkeby  --contract contracts/RealKittyNFT.sol:RealKittyNFT  <CONTRACT ADDRESS>
 ```
+
+
+Далее работа с контрактом:
+https://docs.openzeppelin.com/learn/deploying-and-interacting?pref=hardhat
+
+```
+hh console --network rinkeby
+
+> const realKittyFactory = await ethers.getContractFactory('RealKitty');
+undefined
+
+> const realKittyContract = await realKittyFactory.attach('0xB12B6fc033697ce58a222b24429f11BcE11C1C55');
+undefined
+
+> await realKittyContract.setBaseURI('ipfs://bafybeihmcg6j7zhht5w55lky4t6cwkddnm6lmbm5glhzotn3ojlze5oi7a/');
+
+> await realKittyAttached.safeMint('0x1dA724969d376FC19c40e069D50745D214AC4d02');
+
+> await realKittyAttached.mint(2, { value: ethers.utils.parseEther("0.02") });
+```
+
 
 
 Запуск сайта локально:
