@@ -29,7 +29,7 @@ undefined
 > const realKittyContract = await realKittyFactory.attach('0xB12B6fc033697ce58a222b24429f11BcE11C1C55');
 undefined
 
-> await realKittyContract.setBaseURI('ipfs://bafybeihmcg6j7zhht5w55lky4t6cwkddnm6lmbm5glhzotn3ojlze5oi7a/');
+> await realKittyContract.setBaseURI('ipfs://bafybeidqvzba2oya7xa5d4bwctz6cjk4yuaxlo6wltuidjcvw2ypbr6zty/');
 
 > await realKittyAttached.safeMint('0x1dA724969d376FC19c40e069D50745D214AC4d02');
 
@@ -131,7 +131,7 @@ npm i ethers -P
 npm i -D mime  
 npm i -D nft.storage
 npm i -g ipfs-car   
-
+npm i -D files-from-path
 
 heroku git:remote -a nft-mint-kitty
 ```
