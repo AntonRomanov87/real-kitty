@@ -21,6 +21,14 @@ hh verify --network rinkeby <CONTRACT ADDRESS>
 npm run start
 ```
 
+Опубликовать production-версию в heroku
+```
+git push heroku  
+```
+Используется nginx-solo: см. `Procfile` и `config/nginx.conf.erb`. 
+Production-сборка лежит в директории `build`. 
+
+
 
 ### Загрузка проекта в Heroku
 
